@@ -1,0 +1,220 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  
+}
+
+.header {
+  background: #ff6f61;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.search-bar {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.carousel {
+  margin: 20px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.food-card {
+  min-width: 150px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  flex-shrink: 0;
+}
+
+.food-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.footer a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* cart button in header */
+.cart-button-wrap { margin-left: 16px; }
+.cart-btn {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+.cart-count {
+  background: #ff6f61;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+/* backdrop */
+.cart-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 240ms ease;
+  z-index: 199;
+}
+.cart-backdrop.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* drawer */
+.cart-drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 360px;
+  max-width: 92%;
+  background: #fff;
+  box-shadow: -8px 0 28px rgba(0,0,0,0.15);
+  transform: translateX(110%);
+  transition: transform 320ms ease;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+.cart-drawer.open {
+  transform: translateX(0);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* body */
+.cart-body {
+  padding: 12px;
+  overflow-y: auto;
+  flex: 1;
+}
+.empty {
+  padding: 24px;
+  text-align: center;
+  color: #666;
+}
+
+/* cart item */
+.cart-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px dashed #eee;
+}
+.cart-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.item-info { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.item-info .name { font-weight: 600; }
+.item-info .price { color: #2a9d3b; }
+.qty-controls { display: inline-flex; gap: 8px; align-items: center; }
+.qty-controls button {
+  width: 28px; height: 28px; border-radius: 6px; border: 1px solid #ddd; background: #fff; cursor: pointer;
+}
+
+/* remove button */
+.remove {
+  background: transparent;
+  color: #d9534f;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* summary */
+.cart-summary {
+  padding: 12px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.summary-row.total { font-size: 18px; }
+.summary-actions { display: flex; gap: 8px; margin-top: 8px; }
+.summary-actions .clear {
+  background: #fff; border: 1px solid #ddd; padding: 8px 10px; border-radius: 8px; cursor: pointer;
+}
+.summary-actions .checkout {
+  background: #ff6f61; color: white; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer;
+}
+.summary-actions .checkout:hover {
+  background: #e65b50;
+}

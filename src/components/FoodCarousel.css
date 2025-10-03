@@ -1,0 +1,42 @@
+.carousel-section {
+  margin: 40px 0;
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-inner {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item-name {
+  font-weight: bold;
+  margin: 8px 0 4px;
+}
+
+.item-price {
+  color: green;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.add-btn {
+  padding: 6px 12px;
+  background: #ff5722;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #e64a19;
+}
+                
